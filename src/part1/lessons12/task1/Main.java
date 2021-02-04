@@ -41,16 +41,18 @@ public class Main {
 			System.out.println("Rename coplete");
 		else
 			System.out.println("Error");
-		/*try{
-			Files.copy(renamefile.toPath(),c1.toPath(), StandardCopyOption.REPLACE_EXISTING);
+		try{
+			File copy = new File("C://Copydir","file_copy.txt");
+			Files.copy(renamefile.toPath(),copy.toPath(), StandardCopyOption.REPLACE_EXISTING);
+			System.out.print("File copy : \n");
 		} catch (IOException e){
 			e.getStackTrace();
 		}
-		*/
-
 		boolean b=renamefile.delete();
 		if (b)
 			System.out.print(renamefile.getName()  + " \n "+ "File has been removed");
+
+
 
     }
 }
